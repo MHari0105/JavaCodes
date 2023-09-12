@@ -52,8 +52,7 @@ public class S4_MergeSort {
     }
 }
 
-
 /*
- * Divide the array into half and sort first half of the array and sort second half of the array and sort atlast
+ * Divide the array into half and sort first half of the array and sort second half of the array and merge at last
  * Time Complexity - O (N * logN)
  */
