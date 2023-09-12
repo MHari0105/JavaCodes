@@ -7,6 +7,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Java_Codes.iml" filepath="$PROJECT_DIR$/.idea/Java_Codes.iml" />
       <module fileurl="file://$PROJECT_DIR$/Data Structures/Linked List/Linked List.iml" filepath="$PROJECT_DIR$/Data Structures/Linked List/Linked List.iml" />
       <module fileurl="file://$PROJECT_DIR$/Algorithms/Recurssion/Recurssion.iml" filepath="$PROJECT_DIR$/Algorithms/Recurssion/Recurssion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Algorithms/Recurssion/Recurssion Array/Recurssion Array.iml" filepath="$PROJECT_DIR$/Algorithms/Recurssion/Recurssion Array/Recurssion Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Algorithms/Recurssion/Recurssion Questions/Recurssion Questions.iml" filepath="$PROJECT_DIR$/Algorithms/Recurssion/Recurssion Questions/Recurssion Questions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Algorithms/Recurssion/Recurssion Sorting/Recurssion Sorting.iml" filepath="$PROJECT_DIR$/Algorithms/Recurssion/Recurssion Sorting/Recurssion Sorting.iml" />
       <module fileurl="file://$PROJECT_DIR$/Algorithms/Searching Algorithm/Searching Algorithm.iml" filepath="$PROJECT_DIR$/Algorithms/Searching Algorithm/Searching Algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/Algorithms/Sorting Algorithm/Sorting Algorithm.iml" filepath="$PROJECT_DIR$/Algorithms/Sorting Algorithm/Sorting Algorithm.iml" />
     </modules>
