@@ -2,7 +2,7 @@
 public class Q2_LinearSearch {
     public static void main(String[] args) {
         int[] arr = {23, 6, 31, 89, 45};
-        int targetElement = 9;
+        int targetElement = 89;
 
         boolean exists = linearRecursiveSearch(arr, targetElement, 0);
         System.out.println(exists);
@@ -26,7 +26,6 @@ public class Q2_LinearSearch {
             return false;
         return nums[last] == target || searchFromLast(nums, target, last-1);
     }
-
 
     static int indexValue(int[] nums, int target, int index) {
         if (index == nums.length)

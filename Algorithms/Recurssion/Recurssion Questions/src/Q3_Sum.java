@@ -1,5 +1,4 @@
 
-
 public class Q3_Sum {
     public static void main(String[] args) {
         System.out.println(add(5));
@@ -15,9 +14,9 @@ public class Q3_Sum {
 
     // 1342 -> 1+3+4+2 = 10
     static int sumOfDigits(int n) {
-        if (n == 0)                                // 1 + sumOfDigits(342)
-            return 0;                              // 3 + sumOfDigits(42)
-        return (n%10) + sumOfDigits(n/10);         // 4 + sumOfDigits(2)
+        if (n == 0)                                     // 1 + sumOfDigits(342)
+            return 0;                                   // 3 + sumOfDigits(42)
+        return (n%10) + sumOfDigits(n/10);           // 4 + sumOfDigits(2)
     }
 
     static int productDigits(int n) {

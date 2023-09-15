@@ -78,6 +78,17 @@ public class SinglyLinkedList {
         return node;
     }
 
+    public int removeFirst() {
+        int element = head.value;
+        head = head.next;
+
+        if (head == null)
+            tail = null;
+
+        size--;
+        return element;
+    }
+
     public int deleteLast() {
          if (size <= 1)
              return removeFirst();
@@ -117,17 +128,6 @@ public class SinglyLinkedList {
             node = node.next;
         }
         return node;
-    }
-
-    public int removeFirst() {
-        int element = head.value;
-        head = head.next;
-
-        if (head == null)
-            tail = null;
-
-        size--;
-        return element;
     }
 
     public void display() {
