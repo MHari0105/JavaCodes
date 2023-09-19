@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Maze {
+public class BT1_Maze {
     public static void main(String[] args) {
 
         System.out.println(count(3, 3));
@@ -36,7 +36,7 @@ public class Maze {
         return list;
     }
 
-    
+
 
     static ArrayList<String> moveDiagonal(String path, int row, int col) {
         if (row == 1 && col == 1) {
@@ -47,7 +47,7 @@ public class Maze {
 
         ArrayList<String> list = new ArrayList<>();
 
-        if (row > 1 && col > 1)
+        if (row > 1 && col > 1)     // DIAGONAL
             list.addAll(moveDiagonal(path+'D', row-1, col-1));
 
         if (row > 1)    // VERTICAL
@@ -70,5 +70,4 @@ Calculate total number of parts b/w X to Y
      ----+---+----
   1  |   |   | Y |
      -------------
-
  */

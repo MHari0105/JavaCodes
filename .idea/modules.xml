@@ -19,6 +19,7 @@
       <module fileurl="file://$PROJECT_DIR$/Algorithms/Sorting Algorithm/Sorting Algorithm.iml" filepath="$PROJECT_DIR$/Algorithms/Sorting Algorithm/Sorting Algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/Data Structures/Stack And Queue/Stack And Queue.iml" filepath="$PROJECT_DIR$/Data Structures/Stack And Queue/Stack And Queue.iml" />
       <module fileurl="file://$PROJECT_DIR$/Algorithms/Time and Space Complexity/Time and Space Complexity.iml" filepath="$PROJECT_DIR$/Algorithms/Time and Space Complexity/Time and Space Complexity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Data Structures/Trees/Trees.iml" filepath="$PROJECT_DIR$/Data Structures/Trees/Trees.iml" />
     </modules>
   </component>
 </project>
