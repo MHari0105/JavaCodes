@@ -38,7 +38,6 @@ public class BST {
     }
 
 
-
     public void insert(int value) {
         root = insert(value, root);
     }

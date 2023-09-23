@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class S5_QuickSort {
     public static void main(String[] args) {
 
-        int[] arr = {5, 4, 3, 2, 1};
+        int[] arr = {11, 3, -2, 4, 0, -10};
         quickSort(arr, 0, arr.length-1);
         System.out.println(Arrays.toString(arr));
     }
@@ -34,7 +34,7 @@ public class S5_QuickSort {
             }
         }
 
-        // NOW PIVOT IS AT CORRECT INDEX, SORT THE TWO HALVES NOW
+        // NOW PIVOT IS AT CORRECT INDEX, SORT THE TWO HALVES
         quickSort(nums, low, end);
         quickSort(nums, start, high);
     }

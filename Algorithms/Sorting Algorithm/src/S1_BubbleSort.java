@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class S1_BubbleSort {
     public static void main(String[] args) {
-        int[] nums = {5, 4, 3, 2, 1};
+        int[] nums = {11, -2, 4, 0, -10};
         bubblesSort(nums);
         System.out.println(Arrays.toString(nums));
     }
