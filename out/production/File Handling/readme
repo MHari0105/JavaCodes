@@ -1,0 +1,4 @@
+Streams in Java  2types = Byte Stream and Character Stream
+
+Byte Stream has InputStream and OutputStream
+Character Streams has Reader and Writer
