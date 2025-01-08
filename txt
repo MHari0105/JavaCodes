@@ -1,0 +1,49 @@
+var buyerGln = "6363a121fa5fb113e335d43d";
+var poMetadataNames = [
+    "B12689659", "G12689720", "C12689719", "N12689655", "A12689721", "S12689824", "B12689823", "B12689664",
+    "S12689647", "S12666472", "B12666515", "C12666488", "N12666487", "F12666617", "Z12666497", "D12666471",
+    "A12666516", "G12666489", "S12666925", "D12666924", "B12689628", "Z12667104", "C12689658", "G12689660",
+    "N12606748", "C12606749", "G12606752", "D12606755", "N12606757", "C12606758", "G12606761", "A12606762",
+    "F12606763", "D12606764", "S12606765", "N12606766", "C12606767", "B12606768", "G12606770", "S12606746",
+    "A12606771", "F12606772", "D12606745", "A12606753", "S12606756", "B12606750", "B12606759", "F12606754"
+];
+
+var workbenchBulkOperations = [];
+var shipmentsBulkOperations = [];
+
+db.po_tracing_workbench.find({
+    "buyer_gln" : buyerGln,
+    "po_metadata.name" : { $in : poMetadataNames }
+}).toArray().forEach( workbench => {
+    var status = workbench.status;
+    var expiryDate = workbench.expiry_date;
+    var poQuantity = workbench.po_quantity?.quantity;
+
+    var updateFields = {
+        tracing_status : "NOT_FULFILLED",
+        "remaining_quantity.quantity" : poQuantity,
+        update_ts : ISODate()
+    };
+
+    if (status === "SUBMITTED") {
+        updateFields.status = "IN_PROGRESS"
+    } else if (status === "SUBMITTED_POST_EXPIRY") {
+        updateFields.status = "EXPIRED"
+    } else if (status === "PARTIALLY_SUBMITTED") {
+        updateFields.status = expiryDate > ISODate() ? "IN_PROGRESS" : "EXPIRED";
+    }
+
+    workbenchBulkOperations.push({
+        updateOne : {
+            filter : { "_id" : workbench._id },
+            update : { $set : updateFields }
+        }
+    });
+
+    shipmentsBulkOperations.push({
+        updateMany : {
+            filter : { "po_tracing_workbench_uuid" : workbench.uuid },
+            update : { $set : { status: "IN_ACTIVE", update_ts : ISODate() } }
+        }
+    });
+});

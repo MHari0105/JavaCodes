@@ -15,8 +15,8 @@ public class Ascii {
             return;
         }
         char ch = up.charAt(0);
-        subSeqAscii(p+ch, up.substring(1));
+        subSeqAscii(p + ch, up.substring(1));
         subSeqAscii(p, up.substring(1));
-        subSeqAscii(p+(ch+0), up.substring(1));
+        subSeqAscii(p + (ch + 0), up.substring(1));
     }
 }
