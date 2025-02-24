@@ -1,4 +1,4 @@
-package lambda_expressions.p5_supplier_eample;
+package lambda_expressions.p5_supplier_example;
 
 import java.util.Date;
 import java.util.function.Supplier;

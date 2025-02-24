@@ -21,7 +21,7 @@ public class Demo2 {
 
         // DECLARATIVE APPROACH
         playersList.stream().flatMap(players -> players.stream())
-                .forEach(playerName -> System.out.println(playerName));
+                .forEach(System.out::println);
 
     }
 }

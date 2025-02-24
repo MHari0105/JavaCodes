@@ -19,7 +19,7 @@ public class Demo1 {
                 .forEach(num -> System.out.println(num));   // Consumer<T>
 
         System.out.println("Same output with better approach");
-        myList.stream().filter(n -> n%3 == 0).forEach(System.out::println);
+        myList.stream().filter(n -> n % 3 == 0).forEach(System.out::println);
     }
 
 }
