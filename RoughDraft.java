@@ -1,53 +1,58 @@
+import java.util.*;
+
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
 
 public class RoughDraft {
     public static void main(String[] args) {
 
-        int[] arr = {12, 34, 56, 78, 90, 98, 76};
-        int target = 12;
+//        int[] arr = {-1, 0, 1, 2, -1, -4};
+//        List<List<Integer>> solution = threeSum(arr);
+//        System.out.println(solution);
 
-        int peak = findPeak(arr);
+        int[] arr2 = {1, 2, 3, 4, 5};
+        Node ans = linkedList(arr2);
 
-        int targetIndex = findByPeak(arr, target, peak);
-        System.out.println(targetIndex);
     }
 
-    private static int findPeak(int[] arr) {
-        int start = 0;
-        int end = arr.length-1;
+    private static List<List<Integer>> threeSum(int[] arr) {
+        Set<List<Integer>> solutionSet = new HashSet<>();
 
-        while (start < end) {
-            int middle = start + (end - start) / 2;
-            if (arr[middle] < arr[middle+1])
-                start = middle + 1;
-            else end = middle - 1;
+        for (int i = 0; i < arr.length - 2; i++) {
+            List<Integer> singleList = new ArrayList<>();
+            for (int j = i + 1; j < arr.length - 1; j++) {
+                int k = - (arr[i] + arr[j]);
+                if (singleList.contains(k)) {
+                    List<Integer> list = Arrays.asList(arr[i], arr[j], k);
+                    solutionSet.add(list);
+                }
+                singleList.add(arr[j]);
+            }
+            solutionSet.add(singleList);
         }
 
-        return start;
+        return new ArrayList<>(solutionSet);
     }
 
-    private static int findByPeak(int[] arr, int target, int peak) {
-        int start = 0;
-        int end = arr.length-1;
-        boolean isAsc = target < arr[peak];
-
-        while (start < end) {
-            int middle = start + (end - start) / 2;
-
-            if (arr[middle] == target)
-                return middle;
-
-            if (isAsc) {
-                if (arr[middle] < target)
-                    start = middle + 1;
-                else end = middle - 1;
-            }
-            else {
-                if (arr[middle] > target)
-                    start = middle + 1;
-                else end = middle - 1;
-            }
+    private static Node linkedList(int[] arr) {
+        Node head = new Node(arr[0]);
+        Node temp = head;
+        StringBuilder sb1 = new StringBuilder();
+        for (int i = 1; i <arr.length; i++) {
+            sb1.append(temp.data);
+            sb1.append(" -> ");
+            temp.next = new Node(arr[i]);
+            temp = temp.next;
         }
-
-        return -1;
+        sb1.append(temp.data);
+        System.out.println(sb1);
+        return head;
     }
+
 }
