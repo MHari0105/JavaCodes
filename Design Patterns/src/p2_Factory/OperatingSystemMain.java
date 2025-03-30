@@ -1,6 +1,6 @@
-package factoryDesignPattern;
+package p2_Factory;
 
-import factoryDesignPattern.factory.OperatingSystem;
+import p2_Factory.factory.OperatingSystem;
 
 public class OperatingSystemMain {
 

@@ -2,7 +2,7 @@ package Getters_Setters;
 
 public class Bank {
 
-    private int minBalance = 500;
+    private int minBalance;
 
     public int getMinBalance() {
         return minBalance;

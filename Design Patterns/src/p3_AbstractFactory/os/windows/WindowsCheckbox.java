@@ -1,6 +1,6 @@
-package abstractFactoryDesignPattern.os.windows;
+package p3_AbstractFactory.os.windows;
 
-import abstractFactoryDesignPattern.CheckBox;
+import p3_AbstractFactory.CheckBox;
 
 public class WindowsCheckbox implements CheckBox {
 

@@ -1,8 +1,8 @@
-package factoryDesignPattern;
+package p2_Factory;
 
-import factoryDesignPattern.factory.LinuxOS;
-import factoryDesignPattern.factory.OperatingSystem;
-import factoryDesignPattern.factory.WindowsOS;
+import p2_Factory.factory.LinuxOS;
+import p2_Factory.factory.OperatingSystem;
+import p2_Factory.factory.WindowsOS;
 
 /**
  * Factory : As name suggest it is factory where we can create objects.

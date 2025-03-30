@@ -1,6 +1,6 @@
-package abstractFactoryDesignPattern.os.mac;
+package p3_AbstractFactory.os.mac;
 
-import abstractFactoryDesignPattern.CheckBox;
+import p3_AbstractFactory.CheckBox;
 
 public class MacCheckBox implements CheckBox {
 

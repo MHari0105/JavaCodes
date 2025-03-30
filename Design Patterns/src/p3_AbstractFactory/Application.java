@@ -1,6 +1,6 @@
-package abstractFactoryDesignPattern;
+package p3_AbstractFactory;
 
-import abstractFactoryDesignPattern.uifactory.UIFactory;
+import p3_AbstractFactory.uifactory.UIFactory;
 
 public class Application {
 

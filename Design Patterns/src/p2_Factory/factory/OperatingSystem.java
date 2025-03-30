@@ -1,4 +1,4 @@
-package factoryDesignPattern.factory;
+package p2_Factory.factory;
 
 public abstract class OperatingSystem {
 

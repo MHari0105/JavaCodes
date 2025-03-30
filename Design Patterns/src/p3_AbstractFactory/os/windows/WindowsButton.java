@@ -1,6 +1,6 @@
-package abstractFactoryDesignPattern.os.windows;
+package p3_AbstractFactory.os.windows;
 
-import abstractFactoryDesignPattern.Button;
+import p3_AbstractFactory.Button;
 
 public class WindowsButton implements Button {
 

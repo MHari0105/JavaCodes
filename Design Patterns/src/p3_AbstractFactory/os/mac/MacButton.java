@@ -1,6 +1,6 @@
-package abstractFactoryDesignPattern.os.mac;
+package p3_AbstractFactory.os.mac;
 
-import abstractFactoryDesignPattern.Button;
+import p3_AbstractFactory.Button;
 
 public class MacButton implements Button {
 

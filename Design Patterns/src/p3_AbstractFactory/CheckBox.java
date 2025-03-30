@@ -1,4 +1,4 @@
-package abstractFactoryDesignPattern;
+package p3_AbstractFactory;
 
 public interface CheckBox {
 

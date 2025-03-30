@@ -1,8 +1,8 @@
-package factoryDesignPattern.factory;
+package p2_Factory.factory;
 
-public class LinuxOS extends OperatingSystem {
+public class WindowsOS extends OperatingSystem {
 
-  public LinuxOS(String version, String architecture) {
+  public WindowsOS(String version, String architecture) {
     super(version, architecture);
   }
 
